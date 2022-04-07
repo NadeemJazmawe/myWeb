@@ -9,7 +9,23 @@ export default function Contact() {
     const [message, setMessage] = useState("");
 
     function handelMessage(e) {
-        console.log("Heloo MotherFuckers!!");
+        e.preventDefault();
+        console.log({firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone,
+            message: message});
+        fetch('/user/contact',{
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({firstName: firstName,
+                                    lastName: lastName,
+                                    email: email,
+                                    phone: phone,
+                                    message: message})
+        }).then(console.log("Heloo MotherFuckers!!"))
     }
 
   return (
@@ -64,7 +80,7 @@ export default function Contact() {
                 id="phone"
                 placeholder="Phone Number"
                 onChange ={(e) => {
-                    setFirstName(e.target.value)
+                    setPhone(e.target.value)
                 }}/>
 
             <label htmlFor='firsName'>message</label>
@@ -73,10 +89,10 @@ export default function Contact() {
                 id="message"
                 placeholder="Enter your message.."
                 onChange ={(e) => {
-                    setFirstName(e.target.value)
+                    setMessage(e.target.value)
                 }}/>
 
-            <input type="submit" />
+            <input type="submit" value="Send Message"/>
         </form>
     </div>
   )
