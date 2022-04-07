@@ -13,7 +13,7 @@ export default function AboutMe() {
 
         <p className='text'>
             My Name is Nadeem, thanks for stopping by!
-            I currently live in Tel-Aviv, Israel and a Student of Computer Science mathematics in Ariel University with plans to graduate in august of 2022.
+            I currently live in Tel-Aviv, Israel and a Student of Computer Science and mathematics in Ariel University with plans to graduate in august of 2022.
             I love Swiming, surfing, Mind Games(especial chess) also i like adventures, Off-Road trip, nature taril, camping And traviling. 
             <br/>
             I have passion for codding, Developing Webs and algorithems.

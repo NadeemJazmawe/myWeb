@@ -19,6 +19,8 @@ export default function Header() {
             setActiveTab("project")
         }else if(location.pathname === "/contact"){
             setActiveTab("contact")
+        }else if(location.pathname == "/skill+abilities"){
+            setActiveTab("skill+abilities")
         }
     })
 
@@ -54,6 +56,14 @@ export default function Header() {
                 </p>
             </Link>
 
+            <Link to='/skill+abilities'>
+                <p
+                    className={`${activeTab === "skill+abilities" ? "active" : ""}`}
+                    onClick = { () => setActiveTab('skill+abilities')}>
+                    Skills & Abilities
+                </p>
+            </Link>
+            
             <Link to='/project'>
                 <p
                     className={`${activeTab === "project" ? "active" : ""}`}
@@ -69,7 +79,8 @@ export default function Header() {
                     Contact
                 </p>
             </Link>
-
+            
+            
         </div>
 
     </div>

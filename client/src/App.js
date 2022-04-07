@@ -7,6 +7,7 @@ import AboutMe from './Pages/AboutMe/AboutMe';
 import Resume from './Pages/Resume/Resume';
 import Contact from './Pages/Contact/Contact';
 import Projects from './Pages/Project/Projects';
+import SkillsAndAbilities from './Pages/SkillsAndAbilities/SkillsAndAbilities';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<AboutMe />} />
         <Route path='/resume' element={<Resume />} />
+        <Route path='/skill+abilities' element={<SkillsAndAbilities />} />
         <Route path='/project' element={<Projects />} /> 
         <Route path='/contact' element={<Contact />} />
       </Routes>
