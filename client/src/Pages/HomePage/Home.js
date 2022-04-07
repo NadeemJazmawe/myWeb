@@ -12,7 +12,7 @@ export default function Home() {
         Computer Science Student
       </div>
 
-      <div className="other-web">
+      {/* <div className="other-web">
         <h2>Find me Online</h2>
         <div className="web" 
           onClick={() => {
@@ -28,7 +28,7 @@ export default function Home() {
           GitHub
         </div>
 
-      </div>
+      </div> */}
     </div>
   )
 }

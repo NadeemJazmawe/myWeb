@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import "./Header.css"
+import githubIcon from "./github.png"
+import facebookicon from "./facebook.png"
+import linkedInIcon from "./linkedin.png"
 
 export default function Header() {
 
@@ -68,7 +71,7 @@ export default function Header() {
                 <p
                     className={`${activeTab === "project" ? "active" : ""}`}
                     onClick = { () => setActiveTab('project')}>
-                    Projects
+                    My Projects
                 </p>
             </Link>
 
@@ -76,11 +79,18 @@ export default function Header() {
                 <p
                     className={`${activeTab === "contact" ? "active" : ""}`}
                     onClick = { () => setActiveTab('contact')}>
-                    Contact
+                    Contact Me
                 </p>
             </Link>
             
             
+        </div>
+
+        <div className='socialMedia'>
+            <img src={githubIcon} title="github" className='socialMediaIcons'/>
+            <img src={facebookicon} title="facebook" className='socialMediaIcons'/>
+            <img src={linkedInIcon} title="linkeIn" className='socialMediaIcons'/>
+
         </div>
 
     </div>
